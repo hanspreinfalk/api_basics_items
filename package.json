@@ -1,0 +1,23 @@
+{
+  "name": "game-items-api",
+  "version": "1.0.0",
+  "description": "API for managing game items and users",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "game",
+    "api",
+    "items",
+    "users"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}

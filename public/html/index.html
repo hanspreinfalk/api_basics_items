@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Items API Documentation</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Game Items API Documentation</h1>
+        </header>
+
+        <main>
+            <section class="documentation">
+                <h2>API Endpoints</h2>
+                
+                <div class="endpoint-group">
+                    <h3>Items</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Method</th>
+                                <th>Endpoint</th>
+                                <th>Description</th>
+                                <th>Request Body</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>/api/items</td>
+                                <td>Create new item(s)</td>
+                                <td>{ id, name, type, effect }</td>
+                            </tr>
+                            <tr>
+                                <td>GET</td>
+                                <td>/api/items</td>
+                                <td>Get all items</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>GET</td>
+                                <td>/api/items/:id</td>
+                                <td>Get item by ID</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>PUT</td>
+                                <td>/api/items/:id</td>
+                                <td>Update item</td>
+                                <td>{ name?, type?, effect? }</td>
+                            </tr>
+                            <tr>
+                                <td>DELETE</td>
+                                <td>/api/items/:id</td>
+                                <td>Delete item</td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="endpoint-group">
+                    <h3>Users</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Method</th>
+                                <th>Endpoint</th>
+                                <th>Description</th>
+                                <th>Request Body</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>POST</td>
+                                <td>/api/users</td>
+                                <td>Create new user(s)</td>
+                                <td>{ id, name, email, items? }</td>
+                            </tr>
+                            <tr>
+                                <td>GET</td>
+                                <td>/api/users</td>
+                                <td>Get all users</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>GET</td>
+                                <td>/api/users/:id</td>
+                                <td>Get user by ID</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>PUT</td>
+                                <td>/api/users/:id</td>
+                                <td>Update user</td>
+                                <td>{ name?, email?, items? }</td>
+                            </tr>
+                            <tr>
+                                <td>DELETE</td>
+                                <td>/api/users/:id</td>
+                                <td>Delete user</td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="test-interface">
+                <h2>Test Interface</h2>
+                <div class="test-buttons">
+                    <button onclick="testCreateItem()">Test Create Item</button>
+                    <button onclick="testGetItems()">Test Get Items</button>
+                    <button onclick="testCreateUser()">Test Create User</button>
+                    <button onclick="testGetUsers()">Test Get Users</button>
+                </div>
+                <div class="test-results">
+                    <h3>Test Results</h3>
+                    <pre id="testOutput"></pre>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="../js/script.js"></script>
+</body>
+</html>
