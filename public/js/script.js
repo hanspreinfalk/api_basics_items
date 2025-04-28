@@ -9,19 +9,27 @@ function log(message) {
 async function testCreateItem() {
     log('\n=== Testing Create Item ===');
     try {
-        const item = {
-            id: 'item1',
-            name: 'Health Potion',
-            type: 'Consumable',
-            effect: 'Restores 50 HP'
-        };
+        const items = [
+            {
+                id: 'item1',
+                name: 'Health Potion',
+                type: 'Consumable',
+                effect: 'Restores 50 HP'
+            },
+            {
+                id: 'item2',
+                name: 'Mana Potion',
+                type: 'Consumable',
+                effect: 'Restores 30 MP'
+            }
+        ];
 
         const response = await fetch(`${API_BASE_URL}/items`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(item)
+            body: JSON.stringify(items)
         });
 
         const data = await response.json();
